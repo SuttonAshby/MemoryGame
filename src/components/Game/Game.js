@@ -65,6 +65,7 @@ export default class Game extends Component {
         })
         return <div id="game">
             <h1>Memorize the Flags</h1>
+            <div id="instructions">Click on each flag only once</div>
             {this.state.timesLost !== 0 ? <div id="lost">You've Lost {this.state.timesLost} time(s) </div> : <div /> }
             {this.state.timesWon !== 0 ? <div id="win">You've Won {this.state.timesWon} time(s) </div> : <div /> }
             <div id="score">Current Score: {this.state.score}</div>

@@ -12,5 +12,17 @@
 h1 {
     color: white;
     text-align: center;
+    font-family: "open sans";
+    font-weight: bold
 }
 
+#score, #lost, #win, #instructions {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: "open sans"
+}
+
+#instructions {
+    font-size: 25px
+}
