@@ -1,72 +1,72 @@
 [{
     "id": 0,
-    "image": "./images/00.jpeg",
-    "name": "Hummingbird",
+    "image": "./images/bg.png",
+    "name": "Bulgaria",
     "clicked": false
 },
 {
     "id": 1,
-    "image": "./images/1.jpeg",
-    "name": "Hummingbird",
+    "image": "./images/de.png",
+    "name": "Germany",
     "clicked": false
 },
 {
     "id": 2,
-    "image": "./images/1.jpeg",
-    "name": "Hummingbird",
+    "image": "./images/es.png",
+    "name": "Spain",
     "clicked": false
 },
 {
     "id": 3,
-    "image": "./images/1.jpeg",
-    "name": "Hummingbird",
+    "image": "./images/fi.png",
+    "name": "Finland",
     "clicked": false
 },
 {
     "id": 4,
-    "image": "./images/1.jpeg",
-    "name": "Hummingbird",
+    "image": "./images/fr.png",
+    "name": "France",
     "clicked": false
 },
 {
     "id": 5,
-    "image": "./images/1.jpeg",
-    "name": "Hummingbird",
+    "image": "./images/gb.png",
+    "name": "United Kingdom",
     "clicked": false
 },
 {
     "id": 6,
-    "image": "./images/1.jpeg",
-    "name": "Hummingbird",
+    "image": "./images/ie.png",
+    "name": "Ireland",
     "clicked": false
 },
 {
     "id": 7,
-    "image": "./images/1.jpeg",
-    "name": "Hummingbird",
+    "image": "./images/is.png",
+    "name": "Iceland",
     "clicked": false
 },
 {
     "id": 8,
-    "image": "./images/1.jpeg",
-    "name": "Hummingbird",
+    "image": "./images/it.png",
+    "name": "Italy",
     "clicked": false
 },
 {
     "id": 9,
-    "image": "./images/1.jpeg",
-    "name": "Hummingbird",
+    "image": "./images/nl.png",
+    "name": "Netherlands",
     "clicked": false
 },
 {
     "id": 10,
-    "image": "./images/1.jpeg",
-    "name": "Hummingbird",
+    "image": "./images/no.png",
+    "name": "Norway",
     "clicked": false
 },
 {
     "id": 11,
-    "image": "./images/1.jpeg",
-    "name": "Hummingbird",
+    "image": "./images/se.png",
+    "name": "Sweden",
     "clicked": false
 }]
