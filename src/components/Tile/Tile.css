@@ -1,4 +1,21 @@
 img {
-    width: 150px;
+    width: 75%;
+    /* float: left; */
+    margin: auto;
+    padding: 25px
 }
 
+.tile {
+    float: left;
+    width: 200px;
+    height: 200px;
+    /* padding: 10px; */
+    background-color: lightgray;
+    border: 2px solid black;
+    margin: 5px
+}
+
+.name {
+
+    text-align: center;
+}

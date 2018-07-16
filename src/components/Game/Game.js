@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Tile from './Tile/Tile';
-import data from '../data.json'
+import Tile from '../Tile/Tile';
+import data from '../../data.json'
+import "./Game.css"
  
 
 export default class Game extends Component {
@@ -13,6 +14,7 @@ export default class Game extends Component {
         timesWon: 0
     }
 
+    //Durstenfeld Shuffle
     shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -40,7 +42,7 @@ export default class Game extends Component {
                 if(this.state.score >= 12){
                     let newWin = this.state.timesWon
                     newWin++
-                    this.setState({timesWon: newWin, score: 0})
+                    this.setState({timesWon: newWin, score: 0, clicked: []})
                 }
             })
         }
@@ -61,12 +63,15 @@ export default class Game extends Component {
                 image={flag.image}
                 handleInput={this.handleInput}/>
         })
-        return <div>
-            {this.state.timesLost !== 0 ? <div>You've Lost {this.state.timesLost} time(s) </div> : <div /> }
-            {this.state.timesWon !== 0 ? <div>You've Won {this.state.timesWon} time(s) </div> : <div /> }
-            <div>Current Score: {this.state.score}</div>
-            <div> game space
+        return <div id="game">
+            <h1>Memorize the Flags</h1>
+            {this.state.timesLost !== 0 ? <div id="lost">You've Lost {this.state.timesLost} time(s) </div> : <div /> }
+            {this.state.timesWon !== 0 ? <div id="win">You've Won {this.state.timesWon} time(s) </div> : <div /> }
+            <div id="score">Current Score: {this.state.score}</div>
+            <div id="gameSpace">
+            <div>
                 {forDisplay}
+            </div>
             </div>
         </div>
     }

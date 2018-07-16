@@ -1,0 +1,16 @@
+#gameSpace {
+    margin: auto;
+    width: 70%;
+    background-color: lightgray;
+    overflow: auto;
+}
+
+#game {
+    background-image: url("/images/background.png")
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
