@@ -7,7 +7,10 @@ export default class Game extends Component {
 
     state = {
         data,
-        score: 0
+        score: 0,
+        clicked: [],
+        timesLost: 0,
+        timesWon: 0
     }
 
     shuffleArray(array) {
@@ -17,22 +20,54 @@ export default class Game extends Component {
         }
     }
 
+    handleInput = (event) =>{
+
+        if(this.state.clicked.includes(event)){
+
+            let newLoss = this.state.timesLost
+            newLoss++
+
+            this.setState({timesLost: newLoss, score: 0}, ()=>{
+                console.log(this.state.timesLost)
+            })
+
+        } else {
+            let newScore = this.state.score
+            newScore++
+
+            this.setState({score: newScore,
+            clicked: [...this.state.clicked, event ]}, ()=>{
+                if(this.state.score >= 12){
+                    let newWin = this.state.timesWon
+                    newWin++
+                    this.setState({timesWon: newWin, score: 0})
+                }
+            })
+        }
+
+        console.log(this.state.clicked)
+    }
+
+
 
     render() {
 
-        const shuffled = this.shuffleArray(this.state.data)
-
-        const forDisplay = this.state.data.map((flag) =>{
-            return <Tile key={flag.id} id={flag.id} name={flag.name}  image={flag.image}/>
+    this.shuffleArray(this.state.data)
+        const forDisplay = this.state.data.map((flag) => {
+            return <Tile 
+                key={flag.id} 
+                id={flag.id} 
+                name={flag.name}  
+                image={flag.image}
+                handleInput={this.handleInput}/>
         })
         return <div>
-            <div>Score: {this.state.score}</div>
+            {this.state.timesLost !== 0 ? <div>You've Lost {this.state.timesLost} time(s) </div> : <div /> }
+            {this.state.timesWon !== 0 ? <div>You've Won {this.state.timesWon} time(s) </div> : <div /> }
+            <div>Current Score: {this.state.score}</div>
             <div> game space
-                {/* <Tile id={data[0].id} name={data[0].name}  image={data[0].image}/> */}
                 {forDisplay}
             </div>
-
-
         </div>
     }
 
